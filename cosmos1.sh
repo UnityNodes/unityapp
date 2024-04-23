@@ -14,8 +14,8 @@ function printRed {
 }
 function printAddition {
      echo -e "\e[4m${1}\e[0m"
-
 }
+
   function server() {
   bash <(curl -s https://raw.githubusercontent.com/unitynodes/cosmos/main/server.sh)
 }
