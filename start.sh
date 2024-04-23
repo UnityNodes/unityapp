@@ -18,14 +18,14 @@ function printAddition {
 	
 }
  function menu_english() {
- 	bash <(curl -s https://raw.githubusercontent.com/unitynodes/cosmos/main/server.sh)
+ 	bash <(curl -s https://raw.githubusercontent.com/unitynodes/cosmos/main/menu_english.sh)
 }
 
  function menu_ukrainian() {
- 	bash <(curl -s https://raw.githubusercontent.com/unitynodes/cosmos/main/node_menu.sh)
+ 	bash <(curl -s https://raw.githubusercontent.com/unitynodes/cosmos/main/menu_ukrainian.sh)
 }
  function menu_russian() {
- 	bash <(curl -s https://raw.githubusercontent.com/unitynodes/scripts/main/monitoring.sh)
+ 	bash <(curl -s https://raw.githubusercontent.com/unitynodes/scripts/main/menu_russian.sh)
 }
 
 function main_menu {
@@ -40,7 +40,7 @@ printGreen "●:
 │ ├───┼──────────────────────────────────────┤
 ├─┤ 2 │ Українська                           │
 │ ├───┼──────────────────────────────────────┤
-├─┤ 3 │ Російська                            │
+├─┤ 3 │ Русский                              │
 │ ├───┼──────────────────────────────────────┤
 └─┤ 0 │ Вийти                                │
   └───┴──────────────────────────────────────┘"
