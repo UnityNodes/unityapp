@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function logo() {
-    bash <(curl -s https://raw.githubusercontent.com/CPITMschool/Scripts/main/logo.sh)
+    bash <(curl -s https://raw.githubusercontent.com/UnityNodes/scripts/main/logo.sh)
 }
 	
 
