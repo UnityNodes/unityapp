@@ -43,7 +43,7 @@ function main_menu {
     while true; do
 		clear
         logo 
-printGreen "● Ноди в мережі Cosmos:
+printGreen "● Cosmos network projects:
 │    
 │
 │ ┌───┬──────────────────────────────────────┐
@@ -59,57 +59,57 @@ printGreen "● Ноди в мережі Cosmos:
 │ ├───┼──────────────────────────────────────┤
 ├─┤ 6 │ Side                                 │
 │ ├───┼──────────────────────────────────────┤
-└─┤ 0 │ Вийти                                │
+└─┤ 0 │ Exit                                 │
   └───┴──────────────────────────────────────┘"
-read -p "Зробіть ваш вибір, та введіть номер пункту ► " choice
-        case "$choice" in 
-		1)	
-			printGreen "▼ Lava Network ▼" && sleep 1
-			clear
-			echo ""
-            menu_lava
-            ;;
-		2)	
-			printGreen "▼ Dymension ▼" && sleep 1
-			clear
-			echo ""
-            menu_dymension
-            ;;
-		3)	
-			printGreen "▼ Babylon ▼" && sleep 1
-			clear
-			echo ""
-            menu_babylon
-            ;;
-		4)	
-			printGreen "▼ ZetaChain ▼" && sleep 1
-			clear
-			echo ""
-            menu_zetachain
-            ;;
-		5)	
-			printGreen "▼ Cascadia ▼" && sleep 1
-			clear
-			echo ""
-            menu_cascadia
-            ;;	
-	    	6)	
-			printGreen "▼ Side ▼" && sleep 1
-			clear
-			echo ""
-            menu_side
-            ;;	
-		0)
-			echo "Ви вийшли з меню." 
-            break
-            ;;
-		*)	
-			echo
-			printRed "Неправильно вказаний пункт, спробуйте ще раз:"
-			;;
-        esac
-		read -p "Натисніть Enter, щоб повернутись до головного меню..."
-	done	
+read -p "Make your choice, and enter the item number ► " choice
+         case "$choice" in
+1)
+printGreen "▼ Lava Network ▼" && sleep 1
+clear
+echo ""
+             menu_lava
+             ;;
+2)
+printGreen "▼ Dimension ▼" && sleep 1
+clear
+echo ""
+             menu_dimension
+             ;;
+3)
+printGreen "▼ Babylon ▼" && sleep 1
+clear
+echo ""
+             menu_babylon
+             ;;
+4)
+printGreen "▼ ZetaChain ▼" && sleep 1
+clear
+echo ""
+             menu_zetachain
+             ;;
+5)
+printGreen "▼ Cascadia ▼" && sleep 1
+clear
+echo ""
+             menu_cascadia
+             ;;
+6)
+printGreen "▼ Side ▼" && sleep 1
+clear
+echo ""
+             menu_side
+             ;;
+0)
+echo "You have exited the menu."
+             break
+             ;;
+*)
+echo
+printRed "The specified item is incorrect, please try again:"
+;;
+         esac
+read -p "Press Enter to return to the main menu..."
+done
 }
 
 main_menu
