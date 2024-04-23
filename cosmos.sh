@@ -4,7 +4,6 @@ function logo() {
      bash <(curl -s https://raw.githubusercontent.com/unitynodes/scripts/main/logo.sh)
 }
 
-
 function printGreen {
      echo -e "\e[1m\e[32m${1}\e[0m"
 }
