@@ -17,26 +17,22 @@ function printAddition {
     echo -e "\e[4m${1}\e[0m"
 	
 }
- function server() {
- 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/server.sh)
+ function menu_english() {
+ 	bash <(curl -s https://raw.githubusercontent.com/unitynodes/cosmos/main/server.sh)
 }
 
- function menu_node() {
- 	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/node_menu.sh)
+ function menu_ukrainian() {
+ 	bash <(curl -s https://raw.githubusercontent.com/unitynodes/cosmos/main/node_menu.sh)
 }
- function monitor() {
- 	bash <(curl -s https://raw.githubusercontent.com/asapov01/Install-Grafana/main/installmonitoring.sh)
-}
-
- function backup() {
- 	bash <(curl -s https://raw.githubusercontent.com/asapov01/Backup/main/backup.sh)
+ function menu_russian() {
+ 	bash <(curl -s https://raw.githubusercontent.com/unitynodes/scripts/main/monitoring.sh)
 }
 
 function main_menu {
     while true; do
 		clear
         logo 
-printGreen "●Choise:
+printGreen "●:
 │    
 │
 │ ┌───┬──────────────────────────────────────┐
@@ -53,29 +49,24 @@ read -p "Make your choice, and enter the item number ► " choice
 1)
 clear
 logo
-printGreen "▼ Commands for the server (Working with the server) ▼" && sleep 1
+printGreen "▼ Select English ▼" && sleep 1
 echo ""
-             server
+             menu_english
              ;;
 2)
 clear
 logo
-printGreen "▼ Interaction with Cosmos nodes ▼" && sleep 1
+printGreen "▼ Вибрано Українська ▼" && sleep 1
 echo ""
-             menu_node
+             menu_ukrainian
              ;;
 3)
-printGreen "▼ Setting up monitor ▼" && sleep 1
+printGreen "▼ Выбран Русский ▼" && sleep 1
 clear
 echo ""
-             monitor
+             menu_russian
              ;;
-4)
-printGreen "▼ Creating backup ▼" && sleep 1
-clear
-echo ""
-             backup
-             ;;
+
 0)
 echo "You have exited the menu."
              break
