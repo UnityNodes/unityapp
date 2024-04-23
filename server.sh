@@ -17,22 +17,12 @@ function printAddition {
     echo -e "\e[4m${1}\e[0m"
 	
 }
- function server() {
- 	bash <(curl -s )
-}
-
- function service() {
- 	bash <(curl -s )
-}
- function vali-key() {
- 	bash <(curl -s )
-}
  function monitor() {
- 	bash <(curl -s https://raw.githubusercontent.com/asapov01/Install-Grafana/main/installmonitoring.sh)
+ 	bash <(curl -s https://raw.githubusercontent.com/unitynodes/scripts/main/monitoring.sh)
 }
 
  function backup() {
- 	bash <(curl -s https://raw.githubusercontent.com/asapov01/Backup/main/backup.sh)
+ 	bash <(curl -s https://raw.githubusercontent.com/unitynodes/scripts/main/backup.sh)
 }
 
 function main_menu {
