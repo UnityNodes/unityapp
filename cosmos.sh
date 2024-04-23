@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function logo() {
-     source <(curl -s https://raw.githubusercontent.com/unitynodes/scripts/main/logo.sh)
+     bash <(curl -s https://raw.githubusercontent.com/unitynodes/scripts/main/logo.sh)
 }
 
 function printGreen {
