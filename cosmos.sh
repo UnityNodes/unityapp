@@ -36,59 +36,59 @@ function main_menu {
     while true; do
 		clear
         logo 
-printGreen "● Головне меню:
+printGreen "● Main Menu:
 │    
 │
 │ ┌───┬──────────────────────────────────────┐
-├─┤ 1 │ Команди для сервера (термінал)       │
+├─┤ 1 │ Commands for the server (terminal)   │
 │ ├───┼──────────────────────────────────────┤
-├─┤ 2 │ Взаємодія з нодами Cosmos            │
+├─┤ 2 │ Nodes Cosmos Network                 │
 │ ├───┼──────────────────────────────────────┤
-├─┤ 3 │ Моніторинг                           │
+├─┤ 3 │ Monitoring                           │
 │ ├───┼──────────────────────────────────────┤
-├─┤ 4 │ Бекап                                │
+├─┤ 4 │ Backup                               │
 │ ├───┼──────────────────────────────────────┤
-└─┤ 0 │ Вийти                                │
+└─┤ 0 │ Exit                                 │
   └───┴──────────────────────────────────────┘"
-read -p "Зробіть ваш вибір, та введіть номер пункту ► " choice
-        case "$choice" in 
-		1)	
-			clear
-			logo
-			printGreen "▼ Команди для сервера (Робота з сервером) ▼" && sleep 1
-			echo ""
-            server
-            ;;
-		2)	
-			clear
-			logo
-			printGreen "▼ Взаємодія з нодами Cosmos ▼" && sleep 1
-			echo ""
-            menu_node
-            ;;
-		3)	
-			printGreen "▼ Встановлення моніторонгу ▼" && sleep 1
-			clear
-			echo ""
-            monitor
-            ;;
-		4)	
-			printGreen "▼ Створення бекапу ▼" && sleep 1
-			clear
-			echo ""
-            backup
-            ;;	
-		0)
-			echo "Ви вийшли з меню." 
-            break
-            ;;
-		*)	
-			echo
-			printRed "Неправильно вказаний пункт, спробуйте ще раз:"
-			;;
-        esac
-		read -p "Натисніть Enter, щоб повернутись до головного меню..."
-	done	
+read -p "Make your choice, and enter the item number ► " choice
+         case "$choice" in
+1)
+clear
+logo
+printGreen "▼ Commands for the server (Working with the server) ▼" && sleep 1
+echo ""
+             server
+             ;;
+2)
+clear
+logo
+printGreen "▼ Interaction with Cosmos nodes ▼" && sleep 1
+echo ""
+             menu_node
+             ;;
+3)
+printGreen "▼ Setting up monitor ▼" && sleep 1
+clear
+echo ""
+             monitor
+             ;;
+4)
+printGreen "▼ Creating backup ▼" && sleep 1
+clear
+echo ""
+             backup
+             ;;
+0)
+echo "You have exited the menu."
+             break
+             ;;
+*)
+echo
+printRed "The specified item is incorrect, please try again:"
+;;
+         esac
+read -p "Press Enter to return to the main menu..."
+done
 }
 
 main_menu
