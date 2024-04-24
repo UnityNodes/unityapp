@@ -25,11 +25,11 @@ function printAddition {
  	bash <(curl -s https://raw.githubusercontent.com/CryptoManUA/cosmos/main/node_menu.sh)
 }
  function monitor() {
- 	bash <(curl -s https://raw.githubusercontent.com/asapov01/Install-Grafana/main/installmonitoring.sh)
+ 	bash <(curl -s https://raw.githubusercontent.com/unitynodes/scripts/main/monitoring.sh)
 }
 
  function backup() {
- 	bash <(curl -s https://raw.githubusercontent.com/asapov01/Backup/main/backup.sh)
+ 	bash <(curl -s https://raw.githubusercontent.com/unitynodes/scripts/main/backup.sh)
 }
 
 function main_menu {
