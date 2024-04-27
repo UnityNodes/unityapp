@@ -42,28 +42,18 @@ read -p "Make your choice, and enter the item number ► " choice
          case "$choice" in
     1)
     clear
-    logo
-    printGreen "▼ Commands for the server (Working with the server) ▼" && sleep 1
-    echo ""
     server
     ;;
     2)
     clear
-    logo
-    printGreen "▼ Interaction with Cosmos nodes ▼" && sleep 1
-    echo ""
              menu_cosmos
              ;;
     3)
-    printGreen "▼ Setting up monitor ▼" && sleep 1
     clear
-    echo ""
              monitor
              ;;
     4)
-    printGreen "▼ Creating backup ▼" && sleep 1
     clear
-    echo ""
              validator-backup
              ;;
     0)
