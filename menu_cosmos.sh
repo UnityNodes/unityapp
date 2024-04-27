@@ -3,35 +3,35 @@
 source <(curl -s https://raw.githubusercontent.com/UnityNodes/scripts/main/utils.sh)
 
 function menu_warden {
-	bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/warden/menu_warden.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/warden/menu_warden.sh)
 }
 
 function menu_0G {
-	bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/0G/menu_0g.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0G/menu_0G.sh)
 }
 
 function menu_side {
-	bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/Side/menu_side.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/side/menu_side.sh)
 }
 
 function menu_lava {
-	bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/lava/menu_lava.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/lava/menu_lava.sh)
 }
 
 function menu_warden {
-	bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/babylon/menu_babylon.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/babylon/menu_babylon.sh)
 }
 
 function menu_cascadia {
-	bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/cascadia/menu_cascadia.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/cascadia/menu_cascadia.sh)
 }
 
 function menu_dymension {
-	bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/dymension/menu_dymension.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/dymension/menu_dymension.sh)
 }
 
 function menu_zeta {
-	bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/zetachain/menu_zeta.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/zetachain/menu_zeta.sh)
 }
 
 function main_menu {
