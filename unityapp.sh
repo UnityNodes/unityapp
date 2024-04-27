@@ -66,8 +66,9 @@ read -p "Make your choice, and enter the item number ► " choice
     printRed "The specified item is incorrect, please try again:"
     ;;
             esac
-    read -p "Press Enter to return to the main menu..."
 	clear
+    read -p "Press Enter to return to the main menu..."
+	
     done
 }
 
