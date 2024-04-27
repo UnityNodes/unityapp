@@ -3,27 +3,31 @@
 source <(curl -s https://raw.githubusercontent.com/UnityNodes/scripts/main/utils.sh)
 
 function one-lines {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/warden/one-line_warden.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/warden/one-line_warden.sh)
 }
 
 function service {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/warden/sevice_warden.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/warden/service_warden.sh)
 }
 
 function wallet {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/warden/wallet_warden.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/warden/wallet_warden.sh)
 }
 
 function validator {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/warden/validator_warden.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/warden/validator_warden.sh)
+}
+
+function maintenance {
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/warden/maintenance_warden.sh)
 }
 
 function govermance {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/warden/one-line_warden.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/warden/govermance_warden.sh)
 }
 
 function port {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/warden/port_warden.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/warden/port_warden.sh)
 }
 
 
@@ -57,40 +61,40 @@ read -p "Make your choice and enter the item number: ► " choice
 		1)	
 			clear
 			echo ""
-            service_lava
+            one-lines
             ;;
 		2)	
 			clear
 			echo ""
-            key-vali_lava
+            service
             ;;
 		3)	
 			clear
 			echo ""
-            port_lava
+           wallet
             ;;	
 		4)	
 			clear
 			echo ""
-            port_lava
+            validator
             ;;
 		5)	
 			clear
 			echo ""
-            port_lava
+            maintenance
             ;;
 		6)	
 			clear
 			echo ""
-            port_lava
+            govermance
             ;;
 		7)	
 			clear
 			echo ""
-            port_lava
+            ports
             ;;								
 		0)
-			echo "Ви вийшли з меню." 
+			echo "You have exited the menu." 
             break
             ;;
 		*)	
