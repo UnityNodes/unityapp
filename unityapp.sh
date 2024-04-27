@@ -21,8 +21,9 @@ bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/valida
 
 function main_menu {
     while true; do
+	clear
         anima
-		clear
+	clear
         logo 
 printBlue "● Unity Nodes App:
 │    
