@@ -2,11 +2,10 @@
 
 source <(curl -s https://raw.githubusercontent.com/UnityNodes/scripts/main/utils.sh)
 
-
 function main_menu {
     while true; do
         anima
-		clear
+	clear
         logo 
 printBlue "● Commands for the server:
 │
