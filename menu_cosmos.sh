@@ -18,7 +18,7 @@ function menu_lava {
 	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/lava/menu_lava.sh)
 }
 
-function menu_warden {
+function menu_babylon {
 	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/cosmos/babylon/menu_babylon.sh)
 }
 
