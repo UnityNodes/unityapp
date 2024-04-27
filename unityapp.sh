@@ -3,19 +3,19 @@
 source <(curl -s https://raw.githubusercontent.com/UnityNodes/scripts/main/utils.sh)
 
 function server {
-bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/mail/server.sh)
+bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/server.sh)
 }
 
 function menu_cosmos {
-bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/mail/server.sh)
+bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/menu_cosmos.sh)
 }
 
 function monitoring {
-bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/mail/server.sh)
+bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/monitoring.sh)
 }
 
 function validator-backup {
-bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/mail/server.sh)
+bash bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/validator-backup.sh)
 }
 
 
