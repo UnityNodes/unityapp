@@ -64,44 +64,29 @@ printBlue "● Cosmos menu:
 read -p "Make your choice and enter the item number: ► " choice
         case "$choice" in 
 		1)	
-			echo ""
-            printGreen "▼ Warden Protocol ▼"
 			menu_warden
 			;;
 		2)	
-			echo ""
-            printGreen "▼ 0G (Zero Gravity) ▼"
 			menu_0G
 			;;
 		3)	
 			echo ""
-            printGreen "▼ Side Protocol ▼"
 			menu_side
 			;;
 		4)	
-			echo ""
-            printGreen "▼ Lava Network ▼"
 			menu_lava
 			;;
 
 		5)	
-			echo ""
-            printGreen "▼ Babylon ▼"
 			menu_babylon
 			;;
 		6)	
-			echo ""
-            printGreen "▼ Cascadia ▼"
 			menu_cascadia
 			;;
 		7)	
-			echo ""
-            printGreen "▼ Dymension ▼"
 			menu_dymension
 			;;
 		8)	
-			echo ""
-            printGreen "▼ ZetaChain ▼"
 			menu_zeta
 			;;		
 		0)
