@@ -2,7 +2,7 @@
 
 source <(curl -s https://raw.githubusercontent.com/UnityNodes/scripts/main/utils.sh)
 
-function main_menu {
+function server_menu {
     while true; do
         anima
 	clear
@@ -114,4 +114,4 @@ printRed "The specified item is incorrect, please try again:"
 	done
 }
 
-main_menu
+server_menu
