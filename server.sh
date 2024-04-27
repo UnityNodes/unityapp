@@ -98,7 +98,7 @@ printGreen "Go uninstalled successfully"
 printGreen "▼ Here's what's taking up space on your server ▼" && sleep 1
 printYellow "May take 10-20 seconds to load"
 echo ""
-             find. -type f -size +50M -exec du -h {} + | sort -rh
+             find . -type f -size +50M -exec du -h {} + | sort -rh
              ;;
 0)
 echo "You have exited the menu."
