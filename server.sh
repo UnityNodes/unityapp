@@ -110,8 +110,8 @@ echo
 printRed "The specified item is incorrect, please try again:"
 ;;
          esac
-read -p "Press Enter to return to the main menu..."
-done
+	read -p "Press Enter to return to the main menu..."
+	done
 }
 
 main_menu
