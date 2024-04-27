@@ -1,32 +1,11 @@
 #!/bin/bash
 
-function logo() {
-    bash <(curl -s https://raw.githubusercontent.com/UnityNodes/scripts/main/logo.sh)
-}
-	
+source <(curl -s https://raw.githubusercontent.com/UnityNodes/scripts/main/utils.sh)
 
-function printGreen {
-    echo -e "\e[1m\e[32m${1}\e[0m"
-}
-
-function printRed {
-    echo -e "\e[1m\e[31m${1}\e[0m"
-	
-}
-function printAddition {
-    echo -e "\e[4m${1}\e[0m"
-	
-}
- function monitor() {
- 	bash <(curl -s https://raw.githubusercontent.com/unitynodes/scripts/main/monitoring.sh)
-}
-
- function backup() {
- 	bash <(curl -s https://raw.githubusercontent.com/unitynodes/scripts/main/backup.sh)
-}
 
 function main_menu {
     while true; do
+        anima
 		clear
         logo 
 printGreen "● Commands for the server:
