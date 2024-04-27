@@ -45,8 +45,8 @@ read -p "Make your choice, and enter the item number ► " choice
     logo
     printGreen "▼ Commands for the server (Working with the server) ▼" && sleep 1
     echo ""
-             server
-             ;;
+    server
+    ;;
     2)
     clear
     logo
