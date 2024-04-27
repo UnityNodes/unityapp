@@ -49,7 +49,6 @@ sudo apt update -y && sudo apt full-upgrade -y && sudo apt -y install mc git wge
 printGreen "Server successfully updated"
              ;;
 3)
-
 printGreen "▼ Active processes on the server ▼" && sleep 1
 echo ""
 systemctl list-units --type=service --state=running
@@ -80,7 +79,7 @@ echo ""
 8)
 printGreen "▼ Installing Go ▼" && sleep 1
 echo ""
-ver="1.21.4"
+ver="1.21.6"
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
 sudo rm -rf /usr/local/go
 sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
@@ -90,7 +89,7 @@ source $HOME/.bash_profile
 go version
              ;;
 9)
-printGreen "▼ Deleting Go ▼" && sleep 1
+printGreen "▼ Delete Go ▼" && sleep 1
 echo ""
 sudo apt-get remove golang-go && sudo apt-get remove --auto-remove golang-go
 printGreen "Go uninstalled successfully"
