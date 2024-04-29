@@ -27,7 +27,7 @@ read -p "Make your choice and enter the item number: ► " choice
         case "$choice" in 
 		1)	
 			echo ""
-            printGreen "▼ Edit Validator ▼"
+            printGreen "▼ Create Validator ▼"
 			echo ""
 			printColor blue "Enter your Validator Name"
 			read MONIKER
@@ -41,12 +41,11 @@ read -p "Make your choice and enter the item number: ► " choice
 			printColor blue "Enter your Details (Press enter and this option will be left blank)"
 			read DETAILS
             echo ""
+	    		printColor blue "Enter your Email (Press enter and this option will be left blank)"
+			read EMAIL
+            echo ""
 			
-			if [ -n "$NAME_WALLET_INPUT" ]; then
-			  NAME_WALLET="$NAME_WALLET_INPUT"
-			else
-			  NAME_WALLET="wallet"
-			fi
+			
 
 			if [ -n "$WEBSITE_INPUT" ]; then
 			  WEBSITE="$WEBSITE_INPUT"
@@ -83,17 +82,15 @@ read -p "Make your choice and enter the item number: ► " choice
 			--identity "$IDENTITY" \
 			--details "$DETAILS" \
 			--security-contact="$EMAIL" \
-			--chain-id buenavista-1 \
+			--chain-id $wardenchain \
 			--fees 5000uward \
 			--from wallet
+   			-y
             echo ""	
 			;;
 		2)	
 			echo ""
-            printGreen "▼ Create Validator ▼"
-			echo ""
-			printColor blue "Enter amount for create validator"
-			read AMOUNT
+            printGreen "▼ Edit Validator ▼"
 			echo ""
 			printColor blue "Enter your Validator Name"
 			read MONIKER
@@ -140,15 +137,15 @@ read -p "Make your choice and enter the item number: ► " choice
 
             wardend tx staking edit-validator \
    			--commission-rate "0.05" \
-			--pubkey=$(wardend tendermint show-validator) \
 			--moniker "$MONIKER" \
 			--website "$WEBSITE" \
 			--identity "$IDENTITY" \
 			--details "$DETAILS" \
 			--security-contact="$EMAIL" \
-			--chain-id buenavista-1 \
+			--chain-id $wardenchain \
 			--fees 5000uward \
 			--from wallet
+   			-y
             echo ""	
 			;;
 		3)	
