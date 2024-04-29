@@ -77,6 +77,7 @@ read -p "Make your choice and enter the item number: ► " choice
 			printGreen "Restart service was successful"
             echo ""
 			;;
+   
 		7)	
 			echo ""
             printGreen "↓ Status service  ↓" && sleep 1
@@ -85,6 +86,13 @@ read -p "Make your choice and enter the item number: ► " choice
 			printGreen "Status service was successful"
             echo ""
 			;;
+   		8)	
+			echo ""
+            printGreen "↓ Status service  ↓" && sleep 1
+            echo ""
+            sudo journalctl -u wardend -f --no-hostname -o cat
+			printGreen "Status service was successful"
+            echo ""
 		0)
 			echo ""
 			echo "You have exited the menu." 
