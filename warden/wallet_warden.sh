@@ -35,7 +35,7 @@ printBlue "● Wallet Warden:
 │ ├───┼──────────────────────────────────────┤
 ├─┤ 12│ Unbond tokens from your validator    │
 │ ├───┼──────────────────────────────────────┤
-└─┤ 0 │ Вийти                                │
+└─┤ 0 │ Exit                                 │
   └───┴──────────────────────────────────────┘"
 read -p "Make your choice and enter the item number: ► " choice
         case "$choice" in 
