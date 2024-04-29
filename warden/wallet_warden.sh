@@ -120,7 +120,7 @@ read -p "Make your choice and enter the item number: ► " choice
 			echo "Enter amoun for delegation"
 			read AMOUNT
 			echo ""
-			wardend tx staking delegate $(wardend keys show wallet --bech val -a) ($AMOUNT)uward --from wallet --chain-id $wardenchain --gas-prices 0.01uward --gas-adjustment 1.5 -y  
+			wardend tx staking delegate $(wardend keys show wallet --bech val -a) "$AMOUNT"uward --from wallet --chain-id $wardenchain --gas-prices 0.01uward --gas-adjustment 1.5 -y  
 			;;
 		10)
             echo ""
