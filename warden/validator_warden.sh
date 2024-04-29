@@ -77,7 +77,7 @@ read -p "Make your choice and enter the item number: ► " choice
    			--commission-rate "0.05" \
 			--min-self-delegation "1" \
 			--pubkey=$(wardend tendermint show-validator) \
-			--moniker "$MONIKER" \
+			--new-moniker "$MONIKER" \
 			--website "$WEBSITE" \
 			--identity "$IDENTITY" \
 			--details "$DETAILS" \
