@@ -88,7 +88,6 @@ read -p "Make your choice and enter the item number: ► " choice
             echo ""	
 			;;
 		2)	
-			echo ""
             printGreen "▼ Edit Validator ▼"
 			echo ""
 			printColor blue "Enter your Validator Name"
@@ -103,12 +102,10 @@ read -p "Make your choice and enter the item number: ► " choice
 			printColor blue "Enter your Details (Press enter and this option will be left blank)"
 			read DETAILS
             echo ""
-			
-			if [ -n "$NAME_WALLET_INPUT" ]; then
-			  NAME_WALLET="$NAME_WALLET_INPUT"
-			else
-			  NAME_WALLET="wallet"
-			fi
+	    printColor blue "Enter your Email (Press enter and this option will be left blank)"
+			read EMAIL
+            echo ""
+		
 
 			if [ -n "$WEBSITE_INPUT" ]; then
 			  WEBSITE="$WEBSITE_INPUT"
