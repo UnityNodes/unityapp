@@ -77,7 +77,7 @@ read -p "Make your choice and enter the item number: ► " choice
    			--commission-rate "0.05" \
 			--min-self-delegation "1" \
 			--pubkey=$(wardend tendermint show-validator) \
-			--new-moniker "$MONIKER" \
+			--moniker "$MONIKER" \
 			--website "$WEBSITE" \
 			--identity "$IDENTITY" \
 			--details "$DETAILS" \
@@ -85,7 +85,6 @@ read -p "Make your choice and enter the item number: ► " choice
 			--chain-id $wardenchain \
 			--fees 5000uward \
 			--from wallet
-   			-y
             echo ""	
 			;;
 		2)	
@@ -137,7 +136,7 @@ read -p "Make your choice and enter the item number: ► " choice
 
             wardend tx staking edit-validator \
    			--commission-rate "0.05" \
-			--moniker "$MONIKER" \
+			--new-moniker "$MONIKER" \
 			--website "$WEBSITE" \
 			--identity "$IDENTITY" \
 			--details "$DETAILS" \
@@ -145,7 +144,6 @@ read -p "Make your choice and enter the item number: ► " choice
 			--chain-id $wardenchain \
 			--fees 5000uward \
 			--from wallet
-   			-y
             echo ""	
 			;;
 		3)	
