@@ -22,7 +22,7 @@ function maintenance {
 	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/warden/maintenance_warden.sh)
 }
 
-function govermance {
+function governance {
 	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/warden/govermance_warden.sh)
 }
 
@@ -50,7 +50,7 @@ printBlue "● Menu Warden:
 │ ├───┼──────────────────────────────────────┤
 ├─┤ 5 │ Maintenance (peers,sync info etc)    │
 │ ├───┼──────────────────────────────────────┤
-├─┤ 6 │ Govermance (vote, proposal etc)      │
+├─┤ 6 │ Governance (vote, proposal etc)      │
 │ ├───┼──────────────────────────────────────┤
 ├─┤ 7 │ Ports (change etc)                   │
 │ ├───┼──────────────────────────────────────┤
@@ -86,7 +86,7 @@ read -p "Make your choice and enter the item number: ► " choice
 		6)	
 			clear
 			echo ""
-            govermance
+            governance
             ;;
 		7)	
 			clear
