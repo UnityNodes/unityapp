@@ -2,14 +2,14 @@
 
 source <(curl -s https://raw.githubusercontent.com/UnityNodes/scripts/main/utils.sh)
 
-function backup_node() {
-    node_name="$1"
-    source_dir="$2"
-    files_to_copy=("${@:3}")
-    backup_dir="$HOME/BACKUP/${node_name} backup"
+backup_node() {
+    local node_name="$1"
+    local source_dir="$2"
+    local files_to_copy=("${@:3}")
+    local backup_dir="$HOME/BACKUP/$node_name/config"
+    local backup_message_printed=false
 
-    backup_message_printed=false
-
+    # Перевірка наявності файлів для резервного копіювання
     for file_to_copy in "${files_to_copy[@]}"; do
         if [ -f "$source_dir/$file_to_copy" ]; then
             backup_message_printed=true
@@ -17,16 +17,20 @@ function backup_node() {
         fi
     done
 
+    # Вивід повідомлення про резервне копіювання, якщо є файли для копіювання
     if [ "$backup_message_printed" == true ]; then
-        mkdir -p "$backup_dir"
+        mkdir -p "$backup_dir" || { echo "Failed to create backup directory $backup_dir"; return; }
+
+        # Копіювання файлів у папку резервного копіювання
+        echo "Copying files to $backup_dir"
         for file_to_copy in "${files_to_copy[@]}"; do
             if [ -f "$source_dir/$file_to_copy" ]; then
-                cp "$source_dir/$file_to_copy" "$backup_dir/" || { printRed "Failed to transfer node backup files $node_name"; return; }
+                cp "$source_dir/$file_to_copy" "$backup_dir/" || { echo "Failed to transfer node backup files $node_name"; return; }
             fi
         done
-        echo -e "\e[1m\e[32mBackup node files $node_name transfer successfully\e[0m"
+        echo "Backup completed"
     else
-        echo -e "\e[1m\e[31mNo files found to backup node $node_name or SSD is full\e[0m"
+        echo "No files to backup for node $node_name"
     fi
 }
 
@@ -36,10 +40,10 @@ function backup() {
     read -p "Enter a node name (Lava, Nibiru, Warden, OG, Mantra, Babylon): " node_name
     case "$node_name" in
         Warden)
-            lava_source_dir="$HOME/.warden/"
-            lava_files_to_copy=("config/priv_validator_key.json")
-            backup_node "$node_name" "$warden_source_dir" "${warden_files_to_copy[@]}"
-            echo ""
+        node_name="Warden"
+	warden_source_dir="$HOME/.warden/"
+	warden_files_to_copy=("config/priv_validator_key.json")
+	backup_node "$node_name" "$warden_source_dir" "${warden_files_to_copy[@]}"
             ;;
         OG)
             lava_source_dir="$HOME/.evmosd/"
