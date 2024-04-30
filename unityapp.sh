@@ -14,8 +14,8 @@ function monitoring {
 bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/monitoring/monitoring.sh)
 }
 
-function validator-backup {
-bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/validator-backup.sh)
+function backup {
+bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/backup.sh)
 }
 
 
@@ -55,7 +55,7 @@ read -p "Make your choice, and enter the item number ► " choice
              ;;
     4)
     clear
-             validator-backup
+             backup
              ;;
     0)
     echo "You have exited the menu."
