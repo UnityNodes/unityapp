@@ -9,7 +9,6 @@ backup_node() {
     local backup_dir="$HOME/BACKUP/$node_name/config"
     local backup_message_printed=false
 
-    # Перевірка наявності файлів для резервного копіювання
     for file_to_copy in "${files_to_copy[@]}"; do
         if [ -f "$source_dir/$file_to_copy" ]; then
             backup_message_printed=true
@@ -17,11 +16,9 @@ backup_node() {
         fi
     done
 
-    # Вивід повідомлення про резервне копіювання, якщо є файли для копіювання
     if [ "$backup_message_printed" == true ]; then
         mkdir -p "$backup_dir" || { echo "Failed to create backup directory $backup_dir"; return; }
 
-        # Копіювання файлів у папку резервного копіювання
         echo "Copying files to $backup_dir"
         for file_to_copy in "${files_to_copy[@]}"; do
             if [ -f "$source_dir/$file_to_copy" ]; then
@@ -40,29 +37,24 @@ function backup() {
     read -p "Enter a node name (Lava, Nibiru, Warden, OG, Mantra, Babylon): " node_name
     case "$node_name" in
         Warden)
-        node_name="Warden"
-	warden_source_dir="$HOME/.warden/"
-	warden_files_to_copy=("config/priv_validator_key.json")
-	backup_node "$node_name" "$warden_source_dir" "${warden_files_to_copy[@]}"
+            warden_source_dir="$HOME/.warden/"
+            warden_files_to_copy=("config/priv_validator_key.json")
+            backup_node "$node_name" "$warden_source_dir" "${warden_files_to_copy[@]}"
             ;;
         OG)
-            lava_source_dir="$HOME/.evmosd/"
-            lava_files_to_copy=("config/priv_validator_key.json")
-            backup_node "$node_name" "$og_source_dir" "${og_files_to_copy[@]}"
-            echo ""
+            OG_source_dir="$HOME/.evmosd/"
+            OG_files_to_copy=("config/priv_validator_key.json")
+            backup_node "$node_name" "$OG_source_dir" "${OG_files_to_copy[@]}"
             ;;
         Mantra)
-            lava_source_dir="$HOME/.mantrachain/"
-            lava_files_to_copy=("config/priv_validator_key.json")
+            mantra_source_dir="$HOME/.mantrachain/"
+            mantra_files_to_copy=("config/priv_validator_key.json")
             backup_node "$node_name" "$mantra_source_dir" "${mantra_files_to_copy[@]}"
-            echo ""
-            ;;    
-
+            ;;
         Lava)
             lava_source_dir="$HOME/.lava/"
             lava_files_to_copy=("config/priv_validator_key.json")
             backup_node "$node_name" "$lava_source_dir" "${lava_files_to_copy[@]}"
-            echo ""
             ;;
         Nibiru)
             nibiru_source_dir="$HOME/.nibid/"
@@ -73,7 +65,6 @@ function backup() {
             babylon_source_dir="$HOME/.babylond"
             babylon_files_to_copy=("config/priv_validator_key.json" "data/priv_validator_state.json")
             backup_node "$node_name" "$babylon_source_dir" "${babylon_files_to_copy[@]}"
-
             ;;
         *)
             echo "Invalid node name..."
@@ -87,50 +78,46 @@ function move_backup_files() {
     read -p "Enter the name of the node (Lava, Nibiru, Warden, OG, Mantra, Babylon): " node_name
     case "$node_name" in
         Lava)
-            cp "$HOME/BACKUP/Lava backup/priv_validator_key.json" "$HOME/.lava/config/"
-            systemctl restart lavad
-            echo -e "\e[1m\e[32mLava backup files have been moved\e[0m" && sleep 1
-            echo -e "\e[1m\e[32mAll you have to do is restore your wallet with a mnemonic phrase...\e[0m"
+            backup_dir="$HOME/BACKUP/Lava backup/"
+            node_source_dir="$HOME/.lava/config/"
             ;;
         Nibiru)
-            nibiru_source_dir="$HOME/.nibid/"
-            cp "$HOME/BACKUP/Nibiru backup/priv_validator_key.json" "$nibiru_source_dir/config/"
-            systemctl restart nibid
-            echo -e "\e[1m\e[32mNibiru backup files have been moved\e[0m" && sleep 1
-            echo -e "\e[1m\e[32mAll you have to do is restore your wallet with a mnemonic phrase...\e[0m"
+            backup_dir="$HOME/BACKUP/Nibiru backup/"
+            node_source_dir="$HOME/.nibid/config/"
             ;;
         Babylon)
-            babylon_source_dir="$HOME/.babylond/"
-            cp "$HOME/BACKUP/Babylon backup/priv_validator_key.json" "$babylon_source_dir/config/"
-            systemctl restart babylond
-            echo -e "\e[1m\e[32mBabylon backup files have been moved\e[0m" && sleep 1
-            echo -e "\e[1m\e[32mAll you have to do is restore your wallet with a mnemonic phrase...\e[0m"
+            backup_dir="$HOME/BACKUP/Babylon backup/"
+            node_source_dir="$HOME/.babylond/config/"
             ;;
         Warden)
-            warden_source_dir="$HOME/.warden/"
-            cp "$HOME/BACKUP/Warden backup/priv_validator_key.json" "$HOME/.warden/config/"
-            systemctl restart wardend
-            echo -e "\e[1m\e[32mWarden backup files have been moved\e[0m" && sleep 1
-            echo -e "\e[1m\e[32mAll you have to do is restore your wallet with a mnemonic phrase...\e[0m"
+            backup_dir="$HOME/BACKUP/Warden backup/"
+            node_source_dir="$HOME/.warden/config/"
             ;;
         OG)
-            og_source_dir="$HOME/.evmosd/"
-            cp "$HOME/BACKUP/0G backup/priv_validator_key.json" "$HOME/.evmosd/config/"
-            systemctl restart evmosd
-            echo -e "\e[1m\e[32m0G backup files have been moved\e[0m" && sleep 1
-            echo -e "\e[1m\e[32mAll you have to do is restore your wallet with a mnemonic phrase...\e[0m"
+            backup_dir="$HOME/BACKUP/0G backup/"
+            node_source_dir="$HOME/.evmosd/config/"
             ;;
         Mantra)
-            mantra_source_dir="$HOME/.mantrachain/"
-            cp "$HOME/BACKUP/MantraChain backup/priv_validator_key.json" "$HOME/.mantrachain/config/"
-            systemctl restart mantrachaind
-            echo -e "\e[1m\e[32mMantra backup files have been moved\e[0m" && sleep 1
-            echo -e "\e[1m\e[32mAll you have to do is restore your wallet with a mnemonic phrase...\e[0m"
-            ;;     
+            backup_dir="$HOME/BACKUP/MantraChain backup/"
+            node_source_dir="$HOME/.mantrachain/config/"
+            ;;
         *)
             echo "Invalid node name..."
+            return
             ;;
     esac
+
+    if [ -f "$backup_dir/priv_validator_key.json" ]; then
+        cp "$backup_dir/priv_validator_key.json" "$node_source_dir" && {
+            systemctl restart "$node_name"d
+            echo -e "\e[1m\e[32m$node_name backup files have been moved\e[0m" && sleep 1
+            echo -e "\e[1m\e[32mAll you have to do is restore your wallet with a mnemonic phrase...\e[0m"
+        } || {
+            echo "Failed to move backup file."
+        }
+    else
+        echo "Backup file not found."
+    fi
 }
 
 
@@ -140,27 +127,51 @@ function view_priv() {
     case "$node_name" in
         Lava)
             printColor green "▼ Lava ▼"
-            cat "$HOME/.lava/config/priv_validator_key.json"
+            if [ -f "$HOME/.lava/config/priv_validator_key.json" ]; then
+                cat "$HOME/.lava/config/priv_validator_key.json"
+            else
+                echo "File not found."
+            fi
             ;;
         Nibiru)
             printColor green "▼ Nibiru ▼"
-            cat "$HOME/.nibid/config/priv_validator_key.json"
+            if [ -f "$HOME/.nibid/config/priv_validator_key.json" ]; then
+                cat "$HOME/.nibid/config/priv_validator_key.json"
+            else
+                echo "File not found."
+            fi
             ;;
         Babylon)
             printColor green "▼ Babylon ▼"
-            cat "$HOME/.babylond/config/priv_validator_key.json"
+            if [ -f "$HOME/.babylond/config/priv_validator_key.json" ]; then
+                cat "$HOME/.babylond/config/priv_validator_key.json"
+            else
+                echo "File not found."
+            fi
             ;;
         Warden)
             printColor green "▼ Warden ▼"
-            cat "$HOME/.warden/config/priv_validator_key.json"
+            if [ -f "$HOME/.warden/config/priv_validator_key.json" ]; then
+                cat "$HOME/.warden/config/priv_validator_key.json"
+            else
+                echo "File not found."
+            fi
             ;; 
         OG)
             printColor green "▼ 0G ▼"
-            cat "$HOME/.evmosd/config/priv_validator_key.json"
+            if [ -f "$HOME/.evmosd/config/priv_validator_key.json" ]; then
+                cat "$HOME/.evmosd/config/priv_validator_key.json"
+            else
+                echo "File not found."
+            fi
             ;;
         Mantra)
             printColor green "▼ Mantra Chain ▼"
-            cat "$HOME/.mantrachain/config/priv_validator_key.json"
+            if [ -f "$HOME/.mantrachain/config/priv_validator_key.json" ]; then
+                cat "$HOME/.mantrachain/config/priv_validator_key.json"
+            else
+                echo "File not found."
+            fi
             ;;    
         *)
             echo "Invalid node name..."
