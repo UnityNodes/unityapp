@@ -11,7 +11,7 @@ bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/menu_c
 }
 
 function monitoring {
-bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/monitoring.sh)
+bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/monitoring/monitoring.sh)
 }
 
 function validator-backup {
