@@ -91,7 +91,7 @@ read -p "Make your choice and enter the item number: ► " choice
 		7)	
 			clear
 			echo ""
-            ports
+            port
             ;;								
 		0)
 			echo "You have exited the menu." 
