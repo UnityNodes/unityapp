@@ -10,7 +10,7 @@ function menu_cosmos {
 bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/menu_cosmos.sh)
 }
 
-function monitoring {
+function monitor {
 bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/monitoring/monitoring.sh)
 }
 
