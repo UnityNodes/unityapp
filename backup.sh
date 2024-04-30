@@ -170,7 +170,7 @@ function main_menu {
 		anima
 		clear
         logo 
-printColor blue "● Governance Warden
+printColor blue "● Backup Validator
 │
 │ ┌───┬──────────────────────────────────────┐
 ├─┤ 1 │ Backup nodes                         │
@@ -192,7 +192,7 @@ read -p "Make your choice and enter the item number: ► " choice
             3)
                 view_priv
                 ;;
-            4)
+            0)
                 echo ""
                 echo "You have exited the menu." 
                 break
