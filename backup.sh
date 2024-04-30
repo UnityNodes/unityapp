@@ -107,16 +107,20 @@ function move_backup_files() {
             ;;
     esac
 
-    if [ -f "$backup_dir/priv_validator_key.json" ]; then
-        cp "$backup_dir/priv_validator_key.json" "$node_source_dir" && {
-            systemctl restart "$node_name"d
-            echo -e "\e[1m\e[32m$node_name backup files have been moved\e[0m" && sleep 1
-            echo -e "\e[1m\e[32mAll you have to do is restore your wallet with a mnemonic phrase...\e[0m"
-        } || {
-            echo "Failed to move backup file."
-        }
+    if [ -d "$backup_dir/$node_name/config/" ]; then
+        if [ -f "$backup_dir/$node_name/config/priv_validator_key.json" ]; then
+            cp "$backup_dir/$node_name/config/priv_validator_key.json" "$node_source_dir" && {
+                systemctl restart "$node_name"d
+                echo -e "\e[1m\e[32m$node_name backup files have been moved\e[0m" && sleep 1
+                echo -e "\e[1m\e[32mAll you have to do is restore your wallet with a mnemonic phrase...\e[0m"
+            } || {
+                echo "Failed to move backup file."
+            }
+        else
+            echo "Backup file priv_validator_key.json not found in $node_name backup."
+        fi
     else
-        echo "Backup file not found."
+        echo "Backup directory for $node_name not found."
     fi
 }
 
