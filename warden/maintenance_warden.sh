@@ -8,7 +8,7 @@ function main_menu {
 		anima
 		clear
         logo 
-printColor blue "● Governance Menu:
+printColor blue "● Maintenance Menu:
 │
 │ ┌───┬──────────────────────────────────────┐
 ├─┤ 1 │ Get validator info                   │
@@ -31,7 +31,7 @@ read -p "Make your choice and enter the item number ► " choice
 			echo ""
             printColor green "▼ Get validator info ▼"
             echo ""
-            wardend status 2>&1 | jq .ValidatorInfo && sleep 2
+            wardend status 2>&1 | jq -r '.ValidatorInfo // .validator_info' && sleep 2
             echo ""	
 			;;
 		2)	
