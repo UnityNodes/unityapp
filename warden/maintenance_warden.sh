@@ -36,9 +36,9 @@ read -p "Make your choice and enter the item number ► " choice
 			;;
 		2)	
 			echo ""
-            printColor green "▼ Get sync info ▼"
+            		printColor green "▼ Get sync info ▼"
             echo ""
-			wardend status 2>&1 | jq .SyncInfo && sleep 2
+			wardend status 2>&1 | jq -r '.sync_info' && sleep 2
             echo ""	
 			;;
 		3)	
@@ -52,7 +52,7 @@ read -p "Make your choice and enter the item number ► " choice
 			echo ""
             printColor green "▼ Get live peers ▼"
 			echo ""
-			warden --
+			
             echo ""
 			;;
 		5)	
