@@ -78,27 +78,27 @@ function move_backup_files() {
     read -p "Enter the name of the node (Lava, Nibiru, Warden, OG, Mantra, Babylon): " node_name
     case "$node_name" in
         Lava)
-            backup_dir="$HOME/BACKUP/Lava backup/"
+            backup_dir="$HOME/BACKUP/Lava/"
             node_source_dir="$HOME/.lava/config/"
             ;;
         Nibiru)
-            backup_dir="$HOME/BACKUP/Nibiru backup/"
+            backup_dir="$HOME/BACKUP/Nibiru/"
             node_source_dir="$HOME/.nibid/config/"
             ;;
         Babylon)
-            backup_dir="$HOME/BACKUP/Babylon backup/"
+            backup_dir="$HOME/BACKUP/Babylon/"
             node_source_dir="$HOME/.babylond/config/"
             ;;
         Warden)
-            backup_dir="$HOME/BACKUP/Warden backup/"
+            backup_dir="$HOME/BACKUP/Warden/"
             node_source_dir="$HOME/.warden/config/"
             ;;
         OG)
-            backup_dir="$HOME/BACKUP/0G backup/"
+            backup_dir="$HOME/BACKUP/0G/"
             node_source_dir="$HOME/.evmosd/config/"
             ;;
         Mantra)
-            backup_dir="$HOME/BACKUP/MantraChain backup/"
+            backup_dir="$HOME/BACKUP/MantraChain/"
             node_source_dir="$HOME/.mantrachain/config/"
             ;;
         *)
