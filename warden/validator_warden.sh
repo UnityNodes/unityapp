@@ -147,7 +147,7 @@ read -p "Make your choice and enter the item number: ► " choice
 			echo ""
             printGreen "▼ Unjail Validator  ▼"
             echo ""
-			wardend tx slashing unjail --chain-id buenavista-1 --fees 5000uward --from wallet
+			wardend tx slashing unjail --chain-id $wardenchain --fees 5000uward --from wallet
             echo ""	
 			;;
 		4)	
