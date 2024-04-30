@@ -91,13 +91,14 @@ read -p "Make your choice and enter the item number: ► " choice
             printGreen "↓ Status service  ↓" && sleep 1
             echo ""
             sudo journalctl -u wardend -f --no-hostname -o cat
-			printGreen "Status service was successful"
+		printGreen "Status service was successful"
             echo ""
+			;;
 		0)
 			echo ""
 			echo "You have exited the menu." 
             break
-            ;;
+            		;;
 		*)	
 			echo
 			printRed "Incorrect choice. Try again..."
