@@ -50,7 +50,7 @@ read -p "Make your choice and enter the item number: ► " choice
 			echo ""
 			printGreen "▼ Disable service ▼" && sleep 1
 			echo ""
-            sudo systemctl disable lavad
+            sudo systemctl disable wardend
 			printGreen "Disable service was successful"
             ;;
 		4)	
