@@ -249,11 +249,11 @@ echo -e "\e[1m\e[32mCheck the operation of the node...\e[0m" && sleep 1
 	        ;;
 			11)
 wget -P /root/.warden/config/ -N \
-	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/warden/app.toml
+	https://raw.githubusercontent.com/UnityNodes/unityapp/main/warden/app.toml
 wget -P /root/.warden/config/ -N \
- 	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/warden/client.toml
+ 	https://raw.githubusercontent.com/UnityNodes/unityapp/main/warden/client.toml
 wget -P /root/.warden/config/ -N \
-  	https://raw.githubusercontent.com/CryptoManUA/cosmos/main/warden/config.toml
+  	https://raw.githubusercontent.com/UnityNodes/unityapp/main/warden/config.toml
 sudo systemctl daemon-reload
 sudo systemctl restart wardend
 echo -e "\e[1m\e[32mPort changed...\e[0m" && sleep 1
