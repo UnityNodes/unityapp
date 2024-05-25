@@ -7,7 +7,7 @@ function menu_warden {
 }
 
 function menu_0G {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0G/menu_0G.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0g/menu_0g.sh)
 }
 
 function menu_side {
