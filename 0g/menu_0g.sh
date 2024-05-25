@@ -3,7 +3,7 @@
 source <(curl -s https://raw.githubusercontent.com/UnityNodes/scripts/main/utils.sh)
 
 function one-lines {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0gchain/one-line_0gchain.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0gchain/one-line_0g.sh)
 }
 
 function service {
