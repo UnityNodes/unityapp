@@ -23,7 +23,7 @@ function maintenance {
 }
 
 function governance {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/side/govermance_side.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/side/governance_side.sh)
 }
 
 function port {
