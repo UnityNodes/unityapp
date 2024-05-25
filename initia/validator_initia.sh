@@ -162,7 +162,7 @@ read -p "Make your choice and enter the item number: ► " choice
 			echo ""
             printGreen "▼ Validator details ▼"
             echo ""
-            initiad q staking validator $(initiad keys show wallet --bech val -a)
+            initiad q mstaking validator $(initiad keys show wallet --bech val -a)
             echo ""	
 			;;	
 		0)
