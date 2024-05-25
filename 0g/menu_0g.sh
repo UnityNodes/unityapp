@@ -3,31 +3,31 @@
 source <(curl -s https://raw.githubusercontent.com/UnityNodes/scripts/main/utils.sh)
 
 function one-lines {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0gchain/one-line_0g.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0g/one-line_0g.sh)
 }
 
 function service {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0gchain/service_0g.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0g/service_0g.sh)
 }
 
 function wallet {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0gchain/wallet_0g.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0g/wallet_0g.sh)
 }
 
 function validator {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0gchain/validator_0g.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0g/validator_0g.sh)
 }
 
 function maintenance {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0gchain/maintenance_0g.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0g/maintenance_0g.sh)
 }
 
 function governance {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0gchain/governance_0g.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0g/governance_0g.sh)
 }
 
 function port {
-	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0gchain/port_0g.sh)
+	bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/0g/port_0g.sh)
 }
 
 
