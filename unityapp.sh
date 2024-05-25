@@ -10,6 +10,10 @@ function menu_cosmos {
 bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/menu_cosmos.sh)
 }
 
+function other_menu {
+bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/other_menu.sh)
+}
+
 function monitor {
 bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/monitoring/monitoring.sh)
 }
@@ -25,7 +29,7 @@ function main_menu {
         anima
 	clear
         logo 
-printBlue "● Unity Nodes App:
+printBlue "● Unity Nodes App
 │    
 │
 │ ┌───┬──────────────────────────────────────┐
@@ -33,30 +37,36 @@ printBlue "● Unity Nodes App:
 │ ├───┼──────────────────────────────────────┤
 ├─┤ 2 │ Nodes Cosmos Network                 │
 │ ├───┼──────────────────────────────────────┤
-├─┤ 3 │ Monitoring                           │
+├─┤ 3 │ Other Node (automatic installation)  │
 │ ├───┼──────────────────────────────────────┤
-├─┤ 4 │ Validator Backup                     │
+├─┤ 4 │ Monitoring                           │
+│ ├───┼──────────────────────────────────────┤
+├─┤ 5 │ Validator Backup                     │
 │ ├───┼──────────────────────────────────────┤
 └─┤ 0 │ Exit                                 │
   └───┴──────────────────────────────────────┘"
 read -p "Make your choice, and enter the item number ► " choice
          case "$choice" in
-    1)
-    clear
-    server
+         1)
+        clear
+        server
     ;;
-    2)
-    clear
-             menu_cosmos
-             ;;
-    3)
-    clear
-             monitor
-             ;;
-    4)
-    clear
-             backup
-             ;;
+         2)
+        clear
+        menu_cosmos
+        ;;
+         3)
+        clear
+        other_menu
+        ;;
+        4)
+        clear
+        monitor
+        ;;         
+        5)
+        clear
+        backup
+        ;;
     0)
     echo "You have exited the menu."
                 break
