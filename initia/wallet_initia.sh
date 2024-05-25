@@ -104,7 +104,7 @@ read -p "Make your choice and enter the item number: ► " choice
 			echo ""
             printGreen "▼ Withdraw rewards from all validators ▼"
             echo ""
-			initiad tx distribution withdraw-all-rewards --chain-id $initiachain --fees 80000uinit --from wallet
+			initiad tx distribution withdraw-all-rewards --chain-id "$initiachain" --fees 80000uinit --from wallet
             echo ""
 			;;
 		8)
