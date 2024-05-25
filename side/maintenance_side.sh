@@ -38,7 +38,7 @@ read -p "Make your choice and enter the item number ► " choice
 			echo ""
             		printColor green "▼ Get sync info ▼"
             echo ""
-			sided status 2>&1 | jq -r '.sync_info' && sleep 2
+			sided status 2>&1 | jq -r '.SyncInfo' && sleep 2
             echo ""	
 			;;
 		3)	
