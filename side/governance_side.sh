@@ -57,6 +57,7 @@ read -p "Make your choice and enter the item number: ► " choice
 			read VOTE_OPTION
 			echo ""	
 			sided tx gov vote $PROPOSAL_NUMBER $VOTE_OPTION \
+   			--chain-id $sidechain
 			--fees 5000uside \
 			--from wallet
             echo ""	
