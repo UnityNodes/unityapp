@@ -56,6 +56,8 @@ read -p "Make your choice and enter the item number: ► " choice
 			read VOTE_OPTION
 			echo ""	
 			initiad tx gov vote $PROPOSAL_NUMBER $VOTE_OPTION \
+			--node https://rpc.initia.unitynodes.com \
+   			--chain-id $initiachain
 			--fees 80000uinit \
 			--from wallet
             echo ""	
