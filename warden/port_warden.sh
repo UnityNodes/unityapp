@@ -299,7 +299,7 @@ printBlue "● Ports Warden Protocol
 				printYellow "example 127.0.0.1:26657 - this means that this port is already in use"
 				printYellow "others can be used to populate a node in the Cosmos network"
 				echo ""
-				netstat -tulnp
+				ss -tulnp
 				echo ""	
 				;;
             2)
