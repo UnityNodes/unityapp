@@ -36,7 +36,6 @@ read -p "Make your choice and enter the item number: ► " choice
 			read NUMBER_PROPOSAL
 			echo ""
 			initiad query gov proposal $NUMBER_PROPOSAL \
-			--chain-id $initiachain \
 			--output json | jq
             echo ""	
 			;;
