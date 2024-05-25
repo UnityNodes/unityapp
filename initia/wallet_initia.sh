@@ -118,7 +118,7 @@ read -p "Make your choice and enter the item number: ► " choice
 		9)
             echo ""
             printGreen "▼ Delegate tokens to yourself ▼"
-			echo "Enter amoun for delegation"
+			echo "Enter amount for delegation"
 			read AMOUNT
 			echo ""
 			initiad tx staking delegate $(initiad keys show wallet --bech val -a) "$AMOUNT"uinit --from wallet --chain-id $initiachain --gas-prices 0.01uinit --gas-adjustment 1.5 -y  
