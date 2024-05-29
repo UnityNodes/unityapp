@@ -25,7 +25,7 @@ read -p "Make your choice and enter the item number: ► " choice
 		1)	
 			echo ""
             printGreen "▼ Auto installer ▼"
-			
+		bash <(curl -s https://raw.githubusercontent.com/UnityNodes/scripts/main/warden/install-warden.sh)	
 			;;
 		2)	
 			echo ""
