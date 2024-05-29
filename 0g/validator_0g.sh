@@ -73,6 +73,7 @@ read -p "Make your choice and enter the item number: ► " choice
 			fi
 
             0gchaind tx staking create-validator \
+	    		--amount 1000000ua0gi \
   			--commission-max-change-rate "0.05" \
   			--commission-max-rate "0.10" \
    			--commission-rate "0.05" \
