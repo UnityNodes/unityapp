@@ -51,7 +51,7 @@ read -p "Make your choice and enter the item number: ► " choice
 			else
 			  NAME_WALLET="wallet"
 			fi
-            0gchaind keys add $NAME_WALLET
+            0gchaind keys add $NAME_WALLET --eth
             echo ""	
 			;;
 		2)	
