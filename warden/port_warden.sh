@@ -248,11 +248,11 @@ echo -e "\e[1m\e[32mNode restart...\e[0m" && sleep 1
 echo -e "\e[1m\e[32mCheck the operation of the node...\e[0m" && sleep 1
 	        ;;
 			11)
-wget -P /root/.warden/config/ -N \
+wget -P $HOME/.warden/config/ -N \
 	https://raw.githubusercontent.com/UnityNodes/cosmos/main/warden/app.toml
-wget -P /root/.warden/config/ -N \
+wget -P $HOME/.warden/config/ -N \
  	https://raw.githubusercontent.com/UnityNodes/cosmos/main/warden/client.toml
-wget -P /root/.warden/config/ -N \
+wget -P $HOME/.warden/config/ -N \
   	https://raw.githubusercontent.com/UnityNodes/cosmos/main/warden/config.toml
 
 sudo systemctl restart wardend
