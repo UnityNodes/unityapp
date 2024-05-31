@@ -248,11 +248,11 @@ echo -e "\e[1m\e[32mNode restart...\e[0m" && sleep 1
 echo -e "\e[1m\e[32mCheck the operation of the node...\e[0m" && sleep 1
 	        ;;
 			11)
-wget -P /root/.initia/config/ -N \
+wget -P $HOME/.initia/config/ -N \
 	https://raw.githubusercontent.com/UnityNodes/cosmos/main/initia/app.toml
-wget -P /root/.initia/config/ -N \
+wget -P $HOME/.initia/config/ -N \
  	https://raw.githubusercontent.com/UnityNodes/cosmos/main/initia/client.toml
-wget -P /root/.initia/config/ -N \
+wget -P $HOME/.initia/config/ -N \
   	https://raw.githubusercontent.com/UnityNodes/cosmos/main/initia/config.toml
 sudo systemctl daemon-reload
 sudo systemctl restart initiad
