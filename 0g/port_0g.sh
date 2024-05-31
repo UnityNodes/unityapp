@@ -248,11 +248,11 @@ echo -e "\e[1m\e[32mNode restart...\e[0m" && sleep 1
 echo -e "\e[1m\e[32mCheck the operation of the node...\e[0m" && sleep 1
 	        ;;
 			11)
-wget -P /root/.0gchain/config/ -N \
+wget -P $HOME/.0gchain/config/ -N \
 	https://raw.githubusercontent.com/UnityNodes/cosmos/main/0gchain/app.toml
-wget -P /root/.0gchain/config/ -N \
+wget -P $HOME/.0gchain/config/ -N \
  	https://raw.githubusercontent.com/UnityNodes/cosmos/main/0gchain/client.toml
-wget -P /root/.0gchain/config/ -N \
+wget -P $HOME/.0gchain/config/ -N \
   	https://raw.githubusercontent.com/UnityNodes/cosmos/main/0gchain/config.toml
 
 sudo systemctl restart 0gchaind
