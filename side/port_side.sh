@@ -248,11 +248,11 @@ echo -e "\e[1m\e[32mNode restart...\e[0m" && sleep 1
 echo -e "\e[1m\e[32mCheck the operation of the node...\e[0m" && sleep 1
 	        ;;
 			11)
-wget -P /root/.side/config/ -N \
+wget -P $HOME/.side/config/ -N \
 	https://raw.githubusercontent.com/UnityNodes/cosmos/main/side/app.toml
-wget -P /root/.side/config/ -N \
+wget -P $HOME/.side/config/ -N \
  	https://raw.githubusercontent.com/UnityNodes/cosmos/main/side/client.toml
-wget -P /root/.side/config/ -N \
+wget -P $HOME/.side/config/ -N \
   	https://raw.githubusercontent.com/UnityNodes/cosmos/main/side/config.toml
 sudo systemctl daemon-reload
 sudo systemctl restart sided
