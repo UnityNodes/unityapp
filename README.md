@@ -2,7 +2,8 @@
 
 #### UnityApp is a tool that offers a multitude of features for managing your server, including comprehensive control of Cosmos network nodes supported by our validator. It allows you to install monitoring with Node Exporter, Prometheus, and Grafana with just one click, as well as conveniently view, copy, and transfer backup files to a single directory for Cosmos projects—all without the need for constantly copying extraneous commands. You'll be greeted by a user-friendly interface that is easy to understand for everyone.
 
-![image](https://github.com/UnityNodes/unityapp/assets/159138743/fc536d28-142f-4a6c-b5c6-5dfab6e5cafe)
+![image](https://github.com/UnityNodes/unityapp/assets/137000528/8e7bee4a-a277-46a1-a637-35bda2619dda)
+
 
  
 ### ◻️ Overview
