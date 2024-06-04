@@ -6,8 +6,12 @@ function server {
 bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/server.sh)
 }
 
-function menu_cosmos {
-bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/menu_cosmos.sh)
+function testnet_cosmos {
+bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/testnet_cosmos.sh)
+}
+
+function mainet_cosmos {
+bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/mainet_cosmos.sh)
 }
 
 function other_menu {
@@ -35,35 +39,41 @@ printBlue "● Unity Nodes App
 │ ┌───┬──────────────────────────────────────┐
 ├─┤ 1 │ Commands for the server (terminal)   │
 │ ├───┼──────────────────────────────────────┤
-├─┤ 2 │ Nodes Cosmos Network                 │
+├─┤ 2 │ Testnet Cosmos Network               │
 │ ├───┼──────────────────────────────────────┤
-├─┤ 3 │ Other Node (automatic installation)  │
+├─┤ 3 │ Mainet Cosmos Network                │
 │ ├───┼──────────────────────────────────────┤
-├─┤ 4 │ Monitoring                           │
+├─┤ 4 │ Other Node (automatic installation)  │
 │ ├───┼──────────────────────────────────────┤
-├─┤ 5 │ Validator Backup                     │
+├─┤ 5 │ Monitoring                           │
+│ ├───┼──────────────────────────────────────┤
+├─┤ 6 │ Validator Backup                     │
 │ ├───┼──────────────────────────────────────┤
 └─┤ 0 │ Exit                                 │
   └───┴──────────────────────────────────────┘"
 read -p "Make your choice, and enter the item number ► " choice
          case "$choice" in
-         1)
+        1)
         clear
         server
-    ;;
-         2)
-        clear
-        menu_cosmos
         ;;
-         3)
+        2)
         clear
-        other_menu
+        testnet_cosmos
+        ;;
+        3)
+        clear
+        mainet_cosmos
         ;;
         4)
         clear
+        other_menu
+        ;;
+        5)
+        clear
         monitor
         ;;         
-        5)
+        6)
         clear
         backup
         ;;
