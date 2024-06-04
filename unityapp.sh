@@ -6,12 +6,12 @@ function server {
 bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/server.sh)
 }
 
-function testnet_cosmos {
-bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/testnet_cosmos.sh)
+function testnet_menu {
+bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/testnet_menu.sh)
 }
 
-function mainet_cosmos {
-bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/mainet_cosmos.sh)
+function mainet_menu {
+bash <(curl -s https://raw.githubusercontent.com/UnityNodes/unityapp/main/mainet_menu.sh)
 }
 
 function other_menu {
@@ -59,11 +59,11 @@ read -p "Make your choice, and enter the item number ► " choice
         ;;
         2)
         clear
-        testnet_cosmos
+        testnet_menu
         ;;
         3)
         clear
-        mainet_cosmos
+        mainet_menu
         ;;
         4)
         clear
