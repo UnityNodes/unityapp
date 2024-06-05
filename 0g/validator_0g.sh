@@ -85,7 +85,7 @@ read -p "Make your choice and enter the item number: ► " choice
 			--details "$DETAILS" \
 			--security-contact="$EMAIL" \
 			--chain-id $ogchain \
-			--fees 3000ua0gi \
+			--fees 3500ua0gi \
 			--from wallet
             echo ""	
 			;;
@@ -141,7 +141,7 @@ read -p "Make your choice and enter the item number: ► " choice
 			--details "$DETAILS" \
 			--security-contact="$EMAIL" \
 			--chain-id $ogchain \
-			--fees 300ua0gi \
+			--fees 3500ua0gi \
 			--from wallet
             echo ""	
 			;;
