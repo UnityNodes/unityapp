@@ -58,7 +58,7 @@ read -p "Make your choice and enter the item number: ► " choice
 			echo ""
             printGreen "▼ Recover key (via mnemonic) ▼"
             echo ""
-			0gchaind keys add wallet --recover 
+			0gchaind keys add wallet --eth --recover 
             echo ""	
 			;;
 		3)	
