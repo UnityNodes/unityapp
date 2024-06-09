@@ -25,7 +25,7 @@ read -p "Make your choice and enter the item number: ► " choice
 		1)	
 			echo ""
             printGreen "▼ Auto installer ▼"
-			bash <(curl -s https://raw.githubusercontent.com/UnityNodes/scripts/main/side/install-side.sh)
+			bash <(curl -s https://raw.githubusercontent.com/UnityNodes/scripts/main/side-protocol/install-side.sh)
 			;;
 		2)	
 			echo ""
