@@ -39,7 +39,7 @@ read -p "Make your choice and enter the item number: ► " choice
 			cd $HOME
 			sudo systemctl stop wardend
 			sudo systemctl disable wardend
-			sudo rm /etc/systemd/system/warden.service
+			sudo rm /etc/systemd/system/wardend.service
 			sudo systemctl daemon-reload
 			rm -f $(which wardend)
 			rm -rf ~/.warden
